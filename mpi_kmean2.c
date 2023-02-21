@@ -96,7 +96,7 @@ int mpi_kmeans(float    **objects,     /* in: [numObjs][numCoords] */
     do {
         double curT = MPI_Wtime();
         
-        MPI_Scatter(allMembership, numObjs, MPI_INT, membership, numObjs, MPI_INT, 0, comm);
+        //MPI_Scatter(allMembership, numObjs, MPI_INT, membership, numObjs, MPI_INT, 0, comm);
         scatter_time += MPI_Wtime() - curT;
         delta = 0.0;
         for (i=0; i<numObjs; i++) {
