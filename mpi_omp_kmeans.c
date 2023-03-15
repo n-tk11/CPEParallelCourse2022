@@ -1,21 +1,4 @@
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-/*   File:         seq_kmeans.c  (sequential version)                        */
-/*   Description:  Implementation of simple k-means clustering algorithm     */
-/*                 This program takes an array of N data objects, each with  */
-/*                 M coordinates and performs a k-means clustering given a   */
-/*                 user-provided value of the number of clusters (K). The    */
-/*                 clustering results are saved in 2 arrays:                 */
-/*                 1. a returned array of size [K][N] indicating the center  */
-/*                    coordinates of K clusters                              */
-/*                 2. membership[N] stores the cluster center ids, each      */
-/*                    corresponding to the cluster a data object is assigned */
-/*                                                                           */
-/*   Author:  Wei-keng Liao                                                  */
-/*            ECE Department, Northwestern University                        */
-/*            email: wkliao@ece.northwestern.edu                             */
-/*   Copyright, 2005, Wei-keng Liao                                          */
-/*                                                                           */
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* OMP+MPI Kmeans by Tul using MPI_Allreduce and omp atomic */
 
 #include <stdio.h>
 #include <stdlib.h>
